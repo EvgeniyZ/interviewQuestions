@@ -12,17 +12,13 @@
 * Интернирование строк - что такое, зачем применяется.
 * Как работает IoC контейнер в ASP.NET Core (Transient, Scoped, Singleton)?
 * Какие виды dependency injection есть? (ctor, property, method injections)
-* Зачем придумали async\await, в чём бенефит асинхронного программирования?
+* Зачем придумали async\await, в чём бенефит асинхронного программирования? Как работает async\await под капотом?
 * Что такое abstract class и interface?
 * Что такое .Net? Из чего состоит? Что такое .Net standard? .net core?
-
-Паттерны проектирования
-* SOLID
-* KISS
-* DRY
-* YAGNI
-* Что такое и чем отличаются пессимистичная и оптимистичная блокировки? Pessimistic Locking is when you lock the record     for your exclusive use until you have finished with it. Optimistic Locking is a strategy where you read a record, take      note of a version number (other methods to do this involve dates, timestamps or checksums/hashes) and check that the        version hasn't changed before you write the record back.
-* CQRS, Event sourcing.
+* Что такое Thread pool и зачем он нужен? Какие нюансы с ним есть (сколько их на старте, что бывает когда треды закончили в пуле)?
+* Что такое SynchronizationContext? Дедлок SynchronizationContext в ASP.NET MVC, UI ?
+* Зачем нужен ConfigureAwait(false)?
+* Что быстрее, синхронный метод или его асинхронный вариант? При прочих равных.
 
 GC
 * Как работает GC, как огранизована память в .NET приложении?

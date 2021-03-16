@@ -1,9 +1,9 @@
-* Из чего состоит платформа .NET? (CLR, BCL, Standard Libraries - System.*, Intermediate Language)
+* Из чего состоит платформа .NET? (CLR, BCL, Standard Libraries - System.*, Intermediate Language) .NET 5, .Net Core and .NET Standard
 * Что такое Common Type System? (Value types and reference types)
 * Что такое метаданные в .exe, в .dll?
 * Как в коде поменять метаданные?
 * Как происходит дебаг приложения? (генерация и использование .pdb файлов)
-* Что такое Serializable, зачем он нужен? - передача объекта в файл, по сети (via SOAP или Binary) - BinaryFormatter,       SoapFormatter
+* Что такое Serializable attribute, зачем он нужен? - передача объекта в файл, по сети (via SOAP или Binary) - BinaryFormatter, SoapFormatter
 * Каким атрибутом можно скрыть поле класса чтобы оно не передавалось наружу клиентам? (NotMapped)
 * Какие настройки есть у EF? Что такое ProxyCreationEnable? Что такое Proxy классы в EF?
 * Object State Manager в EF?
@@ -14,14 +14,14 @@
 * Какие виды dependency injection есть? (ctor, property, method injections)
 * Зачем придумали async\await, в чём бенефит асинхронного программирования? Как работает async\await под капотом?
 * Что такое abstract class и interface?
-* Что такое .Net? Из чего состоит? Что такое .Net standard? .net core?
-* Что такое Thread pool и зачем он нужен? Какие нюансы с ним есть (сколько их на старте, что бывает когда треды закончили в пуле)?
-* Что такое SynchronizationContext? Дедлок SynchronizationContext в ASP.NET MVC, UI ?
+* Что такое Thread pool и зачем он нужен? Какие нюансы с ним есть (сколько их на старте, что бывает когда треды закончились в пуле)?
+* Что такое SynchronizationContext? Дедлок SynchronizationContext в ASP.NET MVC, UI?
 * Зачем нужен ConfigureAwait(false)?
 * Что быстрее, синхронный метод или его асинхронный вариант? При прочих равных.
+* Зачем нужны Span<T>, Memory<T>, IMemoryOwner, MemoryPool<T>?
 
 GC
-* Как работает GC, как огранизована память в .NET приложении?
+* Как работает GC, как огранизована память в .NET приложении? (механизм поколений и 3 стадии - marking, relocating, compacting)
 * Как может утекать память в .NET приложении? (подписка на события, неосвобождение ресурсов)
 * Если есть объект А и объект Б и они ссылаются друг на друга, то они вечно живут в куче?
 

@@ -53,6 +53,8 @@ Benchmarking .NET, PerfView, Memory dumps
   
 * Zero allocations, stackalloc  
 * Concurrent Collections and lock-free, wait-free collections in C#
+* Yield operator
+* IEnumerable<T> and IQueryable<T>
 
 GC
 * Как работает GC, как огранизована память в .NET приложении? (механизм поколений и 3 стадии - marking, relocating, compacting)

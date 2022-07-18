@@ -14,7 +14,9 @@
 * Что такое Thread pool и зачем он нужен? Какие нюансы с ним есть (сколько их на старте, что бывает когда треды закончились в пуле)?
 * Зачем нужен ConfigureAwait(false)?
 * Что быстрее, синхронный метод или его асинхронный вариант? При прочих равных.
-* Зачем нужны Span<T>, Memory<T>, IMemoryOwner, MemoryPool<T>?
+* Зачем нужны Span<T>, Memory<T>, IMemoryOwner, MemoryPool<T>? В чём отличие от MemoryStream?
+* В чём отличине между Func и Expression? Когда в LINQ передаётся предикат Func, а когда Expression? Для чего используется Expression?
+* Сколько Heaps есть в приложении? (Small Object heap - Gen0, Gen1, Gen2), Large Object Heap (Gen2), Pinned Object Heap)
 
 GC
 * Как работает GC, как огранизована память в .NET приложении? (механизм поколений и 3 стадии - marking, relocating, compacting)

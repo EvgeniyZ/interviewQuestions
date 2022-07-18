@@ -1,22 +1,58 @@
-* Из чего состоит платформа .NET? (CLR, BCL, Standard Libraries - System.*, Intermediate Language) .NET 5, .Net Core and .NET Standard
-* Что такое Common Type System? (Value types and reference types)
-* Как происходит дебаг приложения? (генерация и использование .pdb файлов)
-* Что такое Serializable attribute, зачем он нужен? - передача объекта в файл, по сети (via SOAP или Binary) - BinaryFormatter, SoapFormatter
-* Каким атрибутом можно скрыть поле класса чтобы оно не передавалось наружу клиентам? (NotMapped)
-* Какие настройки есть у EF? Что такое ProxyCreationEnable? Что такое Proxy классы в EF? Object State Manager в EF?
+* Из чего состоит платформа .NET? 
+
+CLR, BCL, Standard Libraries - System.*, Intermediate Language, .NET 5, 6, .Net Core and .NET Standard
+
+* Что такое Common Type System?
+
+Value types and reference types. 
+
+Value types (int, long, decimal, char, structs, value tuples, nullable<T>, enum) contains an instance (value) of the type. By default, on assignment, passing an argument to a method, and returning a method result, variable values are copied. In the case of value-type variables, the corresponding type instances are copied. [More](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types)
+  
+Reference types.
+  
+Boxing, unboxing mechanisms.
+
+* Как происходит дебаг приложения? 
+  
+Generation and using .pdb files
+  
+* Что такое Serializable attribute, зачем он нужен? 
+  
+Передача объекта в файл, по сети (via SOAP или Binary) - BinaryFormatter, SoapFormatter
+  
+* Каким атрибутом можно скрыть поле класса чтобы оно не передавалось наружу клиентам?
+  
+[NotMapped] attribute
+  
+* Какие настройки есть у EF? Что такое ProxyCreationEnable? Что такое Proxy классы в EF? Object State Manager в EF?  
 * Когда возникает StackOverflowException и как его отловить, исправить, продебажить на продакшене?
-* String это value или reference type? В чём отличие от других reference types (immutable)
-* Интернирование строк - что такое, зачем применяется.
+* String это value или reference type? В чём отличие от других reference types 
+  
+Strings are immutable reference types. Internally used an array of char's. Strings are immutable for a sake of String Interning mechanism where a single string can be used in many places (many references) of an application
+
 * Как работает IoC контейнер в ASP.NET Core (Transient, Scoped, Singleton)?
-* Какие виды dependency injection есть? (ctor, property, method injections)
+* Какие виды dependency injection есть? 
+  
+ctor, property, method injections
+  
 * Зачем придумали async\await, в чём бенефит асинхронного программирования? Как работает async\await под капотом?
+  
+Asynchronous programming позволяет максимально переиспользовать поток приложения (javascript single thread model). Asynchronously starting the next task before the first task completes. Cooking example (making a breakfast) [More](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/)
+
 * Что такое abstract class и interface?
 * Что такое Thread pool и зачем он нужен? Какие нюансы с ним есть (сколько их на старте, что бывает когда треды закончились в пуле)?
 * Зачем нужен ConfigureAwait(false)?
 * Что быстрее, синхронный метод или его асинхронный вариант? При прочих равных.
 * Зачем нужны Span<T>, Memory<T>, IMemoryOwner, MemoryPool<T>? В чём отличие от MemoryStream?
 * В чём отличине между Func и Expression? Когда в LINQ передаётся предикат Func, а когда Expression? Для чего используется Expression?
-* Сколько Heaps есть в приложении? (Small Object heap - Gen0, Gen1, Gen2), Large Object Heap (Gen2), Pinned Object Heap)
+* Сколько Heaps есть в приложении? (Small Object heap - Gen0, Gen1, Gen2), Large Object Heap (Gen2), Pinned Object Heap)  
+  
+* Опыт профилировки и оптимизаций
+  
+Benchmarking .NET, PerfView, Memory dumps
+  
+* Zero allocations, stackalloc  
+* Concurrent Collections and lock-free, wait-free collections in C#
 
 GC
 * Как работает GC, как огранизована память в .NET приложении? (механизм поколений и 3 стадии - marking, relocating, compacting)
